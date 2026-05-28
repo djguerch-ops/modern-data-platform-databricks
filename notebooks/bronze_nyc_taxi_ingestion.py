@@ -22,6 +22,6 @@ df_bronze = df_raw.withColumn(
 df_bronze.write \
     .format("delta") \
     .mode("overwrite") \
-    .save("output/bronze/nyc_taxi")
+    .save("output/bronze/nyc_taxi_bronze")
 
 print("Bronze ingestion completed successfully.")
