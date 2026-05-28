@@ -10,16 +10,14 @@
 
 # Project Overview
 
-This project demonstrates the implementation of a modern cloud data platform using:
+# Project Overview
 
-- Azure Databricks
-- Apache Spark (PySpark)
-- Delta Lake
-- Azure Data Lake Storage
-- Medallion Architecture
-- Power BI
+This project implements a modern Lakehouse Data Platform using Azure Databricks, Apache Spark, Delta Lake and Medallion Architecture.
 
-The platform ingests raw business data, processes and transforms it through Bronze, Silver, and Gold layers, and exposes business KPIs through analytical dashboards.
+The platform ingests real-world NYC Yellow Taxi trip records in Parquet format, processes them through Bronze, Silver and Gold layers, and produces analytics-ready datasets for business intelligence and reporting.
+
+The dataset is based on official NYC Taxi & Limousine Commission trip records.
+
 
 ---
 
@@ -63,13 +61,15 @@ The platform ingests raw business data, processes and transforms it through Bron
 
 # Business Use Case
 
-The project simulates a modern enterprise data platform for sales analytics.
+The project simulates a real-world transportation analytics platform based on NYC Yellow Taxi trip data.
 
 Main objectives:
-- Ingest raw sales datasets
-- Clean and standardize customer data
-- Generate business KPIs
-- Provide analytics-ready datasets for reporting
+
+* Ingest large-scale Parquet taxi trip records
+* Store raw data in Delta Lake Bronze tables
+* Clean and standardize trip data in Silver tables
+* Generate Gold analytics tables for KPIs
+* Analyze revenue, trip volume, distance, tips and payment behavior
 
 ---
 
