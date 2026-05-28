@@ -10,8 +10,6 @@
 
 # Project Overview
 
-# Project Overview
-
 This project implements a modern Lakehouse Data Platform using Azure Databricks, Apache Spark, Delta Lake and Medallion Architecture.
 
 The platform ingests real-world NYC Yellow Taxi trip records in Parquet format, processes them through Bronze, Silver and Gold layers, and produces analytics-ready datasets for business intelligence and reporting.
