@@ -46,6 +46,6 @@ df_payment_summary.show()
 df_payment_summary.write \
     .format("delta") \
     .mode("overwrite") \
-    .save("output/gold/payment_type_analytics")
+    .saveAsTable("output/gold/payment_type_analytics")
 
 print("Spark optimization demo completed successfully.")
