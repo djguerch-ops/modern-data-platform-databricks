@@ -35,6 +35,6 @@ df_silver = df_silver.dropDuplicates()
 df_silver.write \
     .format("delta") \
     .mode("overwrite") \
-    .save("output/silver/nyc_taxi_silver")
+    .saveAsTable("output/silver/nyc_taxi_silver")
 
 print("Silver layer transformation completed successfully.")
