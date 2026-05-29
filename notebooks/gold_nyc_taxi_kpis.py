@@ -15,9 +15,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Read Silver Delta table
-df_silver = spark.read \
-    .format("delta") \
-    .load("output/silver/nyc_taxi_silver")
+df_silver = spark.table("workspace_7474648309056393.default.nyc_taxi_silver")
 
 # Create business KPI table
 df_gold = df_silver \
