@@ -7,9 +7,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Read Bronze Delta table
-df_bronze = spark.read \
-    .format("delta") \
-    .load("output/bronze/nyc_taxi_bronze")
+df_bronze = spark.table("output/bronze/nyc_taxi_bronze")
 
 # Data quality filtering
 df_silver = df_bronze \
