@@ -26,6 +26,6 @@ df_powerbi = df_gold.select(
 df_powerbi.write \
     .format("delta") \
     .mode("overwrite") \
-    .save("output/powerbi/nyc_taxi_dashboard")
+    .saveAsTable("output/powerbi/nyc_taxi_dashboard")
 
 print("Power BI dataset created successfully.")
