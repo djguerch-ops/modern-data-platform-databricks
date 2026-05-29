@@ -37,6 +37,6 @@ df_gold = df_silver \
 df_gold.write \
     .format("delta") \
     .mode("overwrite") \
-    .save("output/gold/nyc_taxi_kpis")
+    .saveAsTable("output/gold/nyc_taxi_kpis")
 
 print("Gold KPI table created successfully.")
