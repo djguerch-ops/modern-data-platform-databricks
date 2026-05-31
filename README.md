@@ -1,4 +1,4 @@
-# Modern Data Platform with Azure Databricks
+# Modern Data Platform with Databricks and Delta Lake
 
 ![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
 ![Databricks](https://img.shields.io/badge/Databricks-Lakehouse-red)
@@ -10,12 +10,11 @@
 
 # Project Overview
 
-This project implements a modern Lakehouse Data Platform using Azure Databricks, Apache Spark, Delta Lake and Medallion Architecture.
+This project implements a modern Lakehouse Data Platform using Databricks, Apache Spark, Delta Lake and Medallion Architecture.
 
 The platform ingests real-world NYC Yellow Taxi trip records in Parquet format, processes them through Bronze, Silver and Gold layers, and produces analytics-ready datasets for business intelligence and reporting.
 
 The dataset is based on official NYC Taxi & Limousine Commission trip records.
-
 
 ---
 
@@ -25,35 +24,77 @@ The dataset is based on official NYC Taxi & Limousine Commission trip records.
 
 ---
 
+# Databricks Execution Evidence
+
+## Unity Catalog Tables
+
+The pipeline was executed in Databricks using Unity Catalog managed Delta tables.
+
+![Unity Catalog Tables](images/catalog_tables.png)
+
+Created tables:
+
+* nyc_taxi_bronze
+* nyc_taxi_silver
+* nyc_taxi_kpis
+
+---
+
+## Gold KPI Table
+
+The Gold layer generates analytics-ready KPI tables from more than 14 million NYC Taxi records.
+
+![Gold KPI Table](images/gold_kpis.png)
+
+---
+
+# Project Scale
+
+| Metric            | Value                  |
+| ----------------- | ---------------------- |
+| Records processed | 14,163,317             |
+| Source format     | Parquet                |
+| Storage format    | Delta Lake             |
+| Processing engine | Apache Spark           |
+| Platform          | Databricks             |
+| Governance        | Unity Catalog          |
+| Architecture      | Bronze / Silver / Gold |
+
+---
+
 # Medallion Architecture
 
 ## Bronze Layer
-- Raw data ingestion
-- Delta Lake storage
-- Historical raw data preservation
+
+* Raw data ingestion
+* Delta Lake storage
+* Historical raw data preservation
 
 ## Silver Layer
-- Data cleansing
-- Standardization
-- Deduplication
-- PySpark transformations
+
+* Data cleansing
+* Standardization
+* Deduplication
+* PySpark transformations
 
 ## Gold Layer
-- Business aggregations
-- KPI generation
-- Analytics-ready tables
+
+* Business aggregations
+* KPI generation
+* Analytics-ready tables
 
 ---
 
 # Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| Azure Data Lake Storage | Raw data storage |
-| Azure Databricks | Distributed processing |
-| PySpark | Data transformation |
-| Delta Lake | ACID transactions & optimization |
-| Power BI | Reporting & dashboards |
+| Technology            | Purpose                |
+| --------------------- | ---------------------- |
+| Unity Catalog Volumes | Raw data storage       |
+| Databricks            | Distributed processing |
+| PySpark               | Data transformation    |
+| Delta Lake            | ACID transactions      |
+| Unity Catalog         | Data governance        |
+| Power BI              | Reporting & dashboards |
 
 ---
 
@@ -73,13 +114,14 @@ Main objectives:
 
 # Features
 
-- Incremental data ingestion
-- Delta Lake tables
-- Medallion Architecture
-- PySpark transformations
-- Business KPI generation
-- Data quality checks
-- Scalable cloud architecture
+* Incremental data ingestion
+* Delta Lake tables
+* Medallion Architecture
+* PySpark transformations
+* Business KPI generation
+* Data quality checks
+* Unity Catalog governance
+* Scalable cloud architecture
 
 ---
 
@@ -102,11 +144,15 @@ modern-data-platform-databricks/
 # Sample KPIs
 
 Examples of generated KPIs:
-- Monthly sales revenue
-- Top customers
-- Product performance
-- Sales trends
-- Regional analytics
+
+* Total trips
+* Total revenue
+* Average fare amount
+* Average trip distance
+* Average tip amount
+* Trips by pickup hour
+* Trips by payment type
+* Monthly revenue trends
 
 ---
 
@@ -114,32 +160,23 @@ Examples of generated KPIs:
 
 This project includes several Spark optimization techniques:
 
-- Partitioning
-- Delta Lake optimization
-- Efficient transformations
-- Optimized joins
-- Scalable processing patterns
+* Partitioning
+* Delta Lake optimization
+* Efficient transformations
+* Optimized joins
+* Scalable processing patterns
 
 ---
 
 # Future Improvements
 
-- CI/CD integration
-- dbt integration
-- Streaming ingestion
-- Terraform deployment
-- Real-time analytics
-- Azure Data Factory orchestration
-
----
-
-# Screenshots
-
-Future project screenshots will include:
-- Databricks notebooks
-- Delta tables
-- Spark jobs
-- Power BI dashboards
+* Power BI dashboard integration
+* Auto Loader ingestion
+* Streaming pipelines
+* CI/CD integration
+* dbt integration
+* Terraform deployment
+* Real-time analytics
 
 ---
 
@@ -148,9 +185,9 @@ Future project screenshots will include:
 Djamel Guerchouche
 
 Senior Data Engineer specialized in:
-- Azure
-- Databricks
-- Apache Spark
-- Delta Lake
-- Enterprise Data Platform Modernization
 
+* Databricks
+* Apache Spark
+* Delta Lake
+* Azure
+* Enterprise Data Platforms
