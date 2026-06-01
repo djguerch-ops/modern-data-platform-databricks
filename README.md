@@ -46,6 +46,9 @@ The Gold layer generates analytics-ready KPI tables from more than 14 million NY
 
 ![Gold KPI Table](images/gold_kpis.png)
 
+<img width="1063" height="581" alt="image" src="https://github.com/user-attachments/assets/08c3c89d-8e9c-40ea-bd70-058bfb36a029" />
+
+
 ---
 
 # Project Scale
@@ -179,6 +182,22 @@ This project includes several Spark optimization techniques:
 * Real-time analytics
 
 ---
+---
+
+## Analytics Dashboard
+
+The Gold layer feeds a Databricks SQL Dashboard used for business analytics and KPI monitoring.
+
+![NYC Taxi Dashboard](images/nyc_taxi_dashboard.png)
+
+Dashboard metrics include:
+
+- Total Trips
+- Total Revenue
+- Average Fare
+- Trips by Hour of Day
+- Trips by Payment Method
+- Monthly Revenue Trend
 
 # Author
 
