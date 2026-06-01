@@ -46,7 +46,6 @@ The Gold layer generates analytics-ready KPI tables from more than 14 million NY
 
 ![Gold KPI Table](images/gold_kpis.png)
 
-<img width="1063" height="581" alt="image" src="https://github.com/user-attachments/assets/08c3c89d-8e9c-40ea-bd70-058bfb36a029" />
 
 
 ---
