@@ -13,7 +13,8 @@ target_table = "workspace_7474648309056393.default.nyc_taxi_bronze_autoloader"
 # Read incoming files using Databricks Auto Loader
 df_stream = (
     spark.readStream
-    .format("cloudFiles")
+    .format("cloudFiles").option("cloudFiles.schemaLocation", "/Volumes/workspace_7474648309056393/default/nyc_taxi_volume/schema")
+
     .option("cloudFiles.format", "parquet")
     .load(source_path)
 )
