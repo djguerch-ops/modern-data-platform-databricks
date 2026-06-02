@@ -1,5 +1,5 @@
 # Import required libraries
-from pyspark.sql.functions import current_timestamp
+from pyspark.sql.functions import current_timestamp, input_file_name, col
 
 # Source location containing incoming Parquet files
 source_path = "/Volumes/workspace_7474648309056393/default/nyc_taxi_volume/raw_streaming"
@@ -24,6 +24,12 @@ df_stream = df_stream.withColumn(
     "ingestion_timestamp",
     current_timestamp()
 )
+# add file name column
+df_stream = df_stream.withColumn(
+    "source_file",col("_metadata.file_path"))
+
+
+
 
 # Write records into Delta table
 (
@@ -32,4 +38,5 @@ df_stream = df_stream.withColumn(
     .option("checkpointLocation", checkpoint_path)
     .trigger(availableNow=True)
     .toTable(target_table)
+      
 )
