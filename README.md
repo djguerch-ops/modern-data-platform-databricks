@@ -198,6 +198,20 @@ Dashboard metrics include:
 - Trips by Payment Method
 - Monthly Revenue Trend
 
+# Advanced Databricks Features
+
+## Auto Loader
+
+This project includes an Auto Loader ingestion pipeline to demonstrate incremental file ingestion using Databricks.
+
+Auto Loader features used:
+- cloudFiles source
+- Parquet ingestion
+- Checkpointing
+- availableNow trigger
+- Delta table output
+- Unity Catalog table
+
 # Author
 
 Djamel Guerchouche
