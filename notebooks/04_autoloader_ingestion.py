@@ -2,7 +2,7 @@
 from pyspark.sql.functions import current_timestamp
 
 # Source location containing incoming Parquet files
-source_path = "/Volumes/workspace_7474648309056393/default/nyc_taxi_volume/raw"
+source_path = "/Volumes/workspace_7474648309056393/default/nyc_taxi_volume/raw_streaming"
 
 # Checkpoint location used by Auto Loader
 checkpoint_path = "/Volumes/workspace_7474648309056393/default/nyc_taxi_volume/checkpoints/autoloader"
