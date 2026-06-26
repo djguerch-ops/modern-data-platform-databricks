@@ -216,7 +216,7 @@ Auto Loader features used:
 
 Djamel Guerchouche
 
-Senior Data Engineer specialized in:
+Data Engineer specialized in:
 
 * Databricks
 * Apache Spark
