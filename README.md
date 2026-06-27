@@ -304,7 +304,7 @@ modern-data-platform-databricks/
 ## Author
 
 **Djamel Guerchouche**
-Senior Data Engineer
+Data Engineer
 
 Specialized in cloud-native data platforms, distributed processing, and Lakehouse architecture.
 
